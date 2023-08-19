@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectronicFirst.com</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav" id="nav">
+            <a href="#" class="nav__logo">
+                <img src="assets/images/logo.webp" alt="logo">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Trending</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Pre-orders</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Upcoming</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Support 24/7</a>
+                    </li>
+                </ul>
+                <div class="nav__submenu">
+                    <ul class="nav__submenu-list" id="submenuList">
+                        <li class="nav__submenu-item">
+                            <span onclick="openModal()" class="nav__submenu-link" id="submenuLink">
+                                <i class="ri-computer-line"></i>
+                                PC
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModal()" class="nav__submenu-link">
+                                <i class="ri-playstation-fill"></i>
+                                Playstation
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModal()" class="nav__submenu-link">
+                                <i class="ri-xbox-fill"></i>
+                                Xbox
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModal()" class="nav__submenu-link">
+                                <i class="ri-switch-line"></i>
+                                Nintendo
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                    </ul>
+                    <input type="text" placeholder="Minecraft, RPG, Multiplayer..." class="search__field" id="searchField">
+                    <button id="openSearchBtn" onclick="openSearch()" class="search__btn"><i class="ri-search-line"></i></button>
+                    <button id="closeSearchBtn" onclick="closeSearch()" class="search__btn2"><i class="ri-close-fill"></i></button>
+                </div>
+
+                <!--====== POPUP ======-->
+                <div class="popup" id="popup">
+                    <div class="popup__header">
+                        <h3 class="popup__heading-title">Platforms</h3>
+                        <a href="#" class="popup__links">View All</a>
+                    </div>
+                    <div class="popup__body">
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-1.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Steam</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-2.jpeg" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Ubisoft Connect</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-3.webp" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">EA App</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-4.jpeg" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Battle.net</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-5.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Rockstar</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-6.webp" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">GOG.com</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-7.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Microsoft Store</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-8.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Epic</h4>
+                        </div>
+                    </div>
+
+                    <div class="popup__header">
+                        <h3 class="popup__heading-title">Prepaid Cards</h3>
+                        <a href="#" class="popup__links">View All</a>
+                    </div>
+                    <div class="popup__body">
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/icon-1.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">Steam Gif Cards</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/logo-2.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">IG Gif Cards</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/logo-3.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">Blizzard Gif Cards</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__action">
+                <ul class="nav__action-list">
+                    <li class="nav__action-item">
+                        <a href="#" class="nav__action-link">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </a>
+                    </li>
+                    <li class="nav__action-item">
+                        <a href="#" class="nav__action-link">
+                            <i class="ri-user-2-line"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="nav__mobile" id="navMobile">
+            <a href="#" class="nav__logo">
+                <img src="assets/images/logo.webp" alt="logo">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__action">
+                    <ul class="nav__action-list">
+                        <li class="nav__action-item">
+                            <a href="#" class="nav__action-link">
+                                <i class="ri-shopping-cart-2-line"></i>
+                            </a>
+                        </li>
+                        <li class="nav__action-item">
+                            <a href="#" class="nav__action-link">
+                                <i class="ri-user-2-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Trending</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Pre-orders</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Upcoming</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Support 24/7</a>
+                    </li>
+                </ul>
+                <div class="nav__submenu">
+                    <ul class="nav__submenu-list" id="submenuListMobile">
+                        <li class="nav__submenu-item">
+                            <span onclick="openModalMobile()" class="nav__submenu-link" id="submenuLink">
+                                <i class="ri-computer-line"></i>
+                                PC
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModalMobile()" class="nav__submenu-link">
+                                <i class="ri-playstation-fill"></i>
+                                Playstation
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModalMobile()" class="nav__submenu-link">
+                                <i class="ri-xbox-fill"></i>
+                                Xbox
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                        <li class="nav__submenu-item">
+                            <span onclick="openModalMobile()" class="nav__submenu-link">
+                                <i class="ri-switch-line"></i>
+                                Nintendo
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                        </li>
+                    </ul>
+                    <input type="text" placeholder="Minecraft, RPG, Multiplayer..." class="search__field" id="searchFieldMobile">
+                    <button id="openSearchBtnMobile" onclick="openSearchMobile()" class="search__btn"><i class="ri-search-line"></i></button>
+                    <button id="closeSearchBtnMobile" onclick="closeSearchMobile()" class="search__btn2"><i class="ri-close-fill"></i></button>
+                </div>
+
+                <!--====== POPUP ======-->
+                <div class="popup" id="popupMobile">
+                    <div class="popup__header">
+                        <h3 class="popup__heading-title">Platforms</h3>
+                        <a href="#" class="popup__links">View All</a>
+                    </div>
+                    <div class="popup__body">
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-1.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Steam</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-2.jpeg" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Ubisoft Connect</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-3.webp" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">EA App</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-4.jpeg" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Battle.net</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-5.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Rockstar</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-6.webp" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">GOG.com</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-7.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Microsoft Store</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card">
+                            <img src="assets/images/icon-8.png" alt="popup__icon" class="popup__icon">
+                            <h4 class="popup__title">Epic</h4>
+                        </div>
+                    </div>
+
+                    <div class="popup__header">
+                        <h3 class="popup__heading-title">Prepaid Cards</h3>
+                        <a href="#" class="popup__links">View All</a>
+                    </div>
+                    <div class="popup__body">
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/icon-1.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">Steam Gif Cards</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/logo-2.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">IG Gif Cards</h4>
+                        </div>
+                        <!--====== POPUP CARD ======-->
+                        <div class="popup__card-prepaid">
+                            <img src="assets/images/logo-3.png" alt="popup__logo" class="popup__logo">
+                            <h4 class="popup__title">Blizzard Gif Cards</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </nav>
+        <a href="#" class="nav__logo-mobile">
+            <img src="assets/images/logo.webp" alt="logo">
+        </a>
+        <div onclick="navToggle()" class="nav__toggle" id="nav-toggle">
+            <i class="ri-function-line"></i>
+        </div>
+        <div onclick="navToggle()" class="nav__toggle2" id="nav-toggle2">
+            <i class="ri-close-fill"></i>
+        </div>
+    </header>
+
+    <main class="main" id="main">
+        <!--====== HERO ======-->
+        <section class="hero" id="hero">
+            <!-- banner  -->
+            <div class="hero__banner">
+                <div class="container">
+                    <div class="content">
+                        <span class="badge">In 15 days</span>
+                        <h2 class="section__title">Starfield Digital premium <br> edition + early access</h2>
+                        <div class="hero__pricing">
+                            <span class="discount__badge">-25%</span>
+                            <h1 class="price__title">74.55 &euro;</h1>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        <span class="mantine-12p6drp">
+                            <span class="mantine-zrvh70">
+                                <span class="mantine-k062m4">
+                                <a class="mantine-1qzm7qh" style="height:50px" type="button" data-button="true" href="#">
+                                    <div class="mantine-1kvfxz6">
+                                        <span class="mantine-1vkedoz">+ early access</span>
+                                    </div>
+                                </a>
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- products  -->
+            <div class="hero__products container">
+                <div class="heading">
+                    <h3 class="section__subtitle">Trending</h3>
+                    <a href="#" class="redirect__badge">View All</a>
+                </div>
+                <div class="hero__products-body">
+                    <!--====== PRODUCT CARD 1 ======-->
+                    <div class="card">
+                        <div class="card__banner">
+                            <img src="assets/images/product-2.jpg" alt="image">
+                            <span class="discount__badge">-25%</span>
+                        </div>
+                        <div class="card__body">
+                            <a href="#" class="card__title">Sengoku Dynasty</a>
+                            <p class="card__pricing">19.89 &euro;</p>
+                        </div>
+                    </div>
+                    <!--====== PRODUCT CARD 2 ======-->
+                    <div class="card">
+                        <div class="card__banner">
+                            <img src="assets/images/product-4.jpg" alt="image">
+                            <span class="discount__badge">-23%</span>
+                        </div>
+                        <div class="card__body">
+                            <a href="#" class="card__title">The Sims 4 Horse Ranch</a>
+                            <p class="card__pricing">30.89 &euro;</p>
+                        </div>
+                    </div>
+                    <!--====== PRODUCT CARD 3 ======-->
+                    <div class="card">
+                        <div class="card__banner">
+                            <img src="assets/images/product-3.jpg" alt="image">
+                            <span class="discount__badge">-30%</span>
+                        </div>
+                        <div class="card__body">
+                            <a href="#" class="card__title">Remnant 2</a>
+                            <p class="card__pricing">34.89 &euro;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
