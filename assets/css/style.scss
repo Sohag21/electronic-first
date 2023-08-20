@@ -263,16 +263,16 @@ a{
   height: 70%;
   position: relative;
 }
-// .hero__banner::after{
-//   content: "";
-//   position: absolute;
-//   bottom: 0px;
-//   left: 0;
-//   width: 0;
-//   height: 0;
-//   border-bottom: 80px solid var(--bg-color);
-//   border-right: 1370px solid transparent;
-// }
+.hero__banner::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 80px solid var(--bg-color);
+  border-right: 1370px solid transparent;
+}
 .hero__banner .container{
   height: 100%;
   display: flex;
@@ -654,7 +654,7 @@ a{
   }
   .hero__banner::after{
     border-bottom: 50px solid var(--bg-color);
-    border-right: 680px solid transparent;
+    border-right: 600px solid transparent;
   }
   .hero__banner .container{
     padding-top: 15%;
@@ -668,8 +668,8 @@ a{
     width: 100%;
   }
   .hero__banner::after{
-    border-bottom: 50px solid var(--bg-color);
-    border-right: 680px solid transparent;
+    border-bottom: 40px solid var(--bg-color);
+    border-right: 500px solid transparent;
   }
   .hero__banner .content, .btn{
     margin: 0px 25px;
@@ -743,12 +743,19 @@ a{
   .nav__mobile .open-modal {
     top: 28rem;
   }
-
+  .hero__banner::after{
+    border-bottom: 30px solid var(--bg-color);
+    border-right: 400px solid transparent;
+  }
 }
 @media screen and (max-width: 400px) {
   .hero__products-body {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .hero__banner::after{
+    border-bottom: 20px solid var(--bg-color);
+    border-right: 300px solid transparent;
   }
 }
 
@@ -848,18 +855,3 @@ a{
 .nav__toggle2:hover{
   color: var(--light-color);
 }
-
-// .nav__close {
-//   position: absolute;
-//   top: .75rem;
-//   right: 1rem;
-//   font-size: 1.5rem;
-//   color: var(--title-color);
-//   cursor: pointer;
-// }
-
-// /* show menu */
-// .show-menu {
-//   right: 0;
-// }
-
