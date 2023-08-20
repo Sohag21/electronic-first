@@ -700,6 +700,9 @@ a {
   .hero__banner .container {
     padding-top: 15%;
   }
+  .nav__logo-mobile img {
+    width: 85px;
+  }
 }
 @media screen and (max-width: 600px) {
   .container {
@@ -769,6 +772,18 @@ a {
     gap: 0.4rem;
     padding: 12px 40px 12px 12px;
   }
+  .nav__mobile .popup {
+    width: 342px;
+  }
+  .nav__mobile .popup__heading-title {
+    font-size: var(--small-font-size);
+  }
+  .nav__mobile .popup__title {
+    font-size: var(--smaller-font-size);
+  }
+  .nav__mobile .open-modal {
+    top: 28rem;
+  }
 }
 @media screen and (max-width: 400px) {
   .hero__products-body {
@@ -804,7 +819,7 @@ a {
 .open-modal {
   visibility: visible;
   transform: translate(4%, -50%) scale(1);
-  top: 305px;
+  top: 20rem;
 }
 
 .popup__header {
@@ -829,7 +844,7 @@ a {
 .popup__body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 15px;
+  gap: 0.6rem;
   padding: var(--p-0-75);
   padding-bottom: var(--p-2);
 }
@@ -838,6 +853,13 @@ a {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.popup__card:hover {
+  background: rgba(191, 191, 191, 0.3294117647);
+  border-radius: 25px;
 }
 
 .popup__icon {
